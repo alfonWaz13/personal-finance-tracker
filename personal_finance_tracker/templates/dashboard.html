@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Personal Finance Dashboard</title>
+</head>
+<body>
+    <h1>Dashboard</h1>
+
+    <h2>Expenses</h2>
+    <ul>
+        {% for expense in expenses %}
+            <li>{{ expense.category }} - ${{ expense.amount }} on {{ expense.date_and_time|date:"Y-m-d" }}</li>
+        {% endfor %}
+    </ul>
+
+    <h2>Incomes</h2>
+    <ul>
+        {% for income in incomes %}
+            <li>{{ income.category }} - ${{ income.amount }} on {{ income.date_and_time|date:"Y-m-d" }}</li>
+        {% endfor %}
+    </ul>
+
+    <a href="{% url 'add_expense' %}">Add New Expense</a>
+    <a href="{% url 'add_income' %}">Add New Income</a>
+</body>
+</html>
