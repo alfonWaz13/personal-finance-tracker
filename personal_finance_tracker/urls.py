@@ -17,10 +17,10 @@ Including another URLconf
 from django.contrib import admin
 from django.urls import path
 
-from . import views
+from personal_finance_tracker import views
 
 urlpatterns = [
     path('admin/', admin.site.urls),
-    path('', views.homepage),
+    path('', views.dashboard, name='dashboard'),
     path('about/', views.about),
 ]
