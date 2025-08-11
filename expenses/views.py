@@ -7,8 +7,8 @@ def add_expense(request):
         form = ExpenseForm(request.POST)
         if form.is_valid():
             form.save()
-            return redirect('expense_list')
+            return redirect('dashboard')
     else:
         form = ExpenseForm()
 
-    return render(request, 'expenses/add_expense.html', {'form': form})
+    return render(request, 'add_expense.html', {'form': form})
