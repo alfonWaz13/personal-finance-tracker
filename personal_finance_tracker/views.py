@@ -25,7 +25,7 @@ def dashboard(request):
 
 
 def get_entries_by_category(entries: Expense | Income) -> list:
-    return list(entries.values('category').annotate(total=Sum('amount')))
+    return list(entries.order_by().values('category').annotate(total=Sum('amount')))
 
 
 def get_total_balance(expenses, incomes):
