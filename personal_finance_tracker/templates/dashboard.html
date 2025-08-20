@@ -64,7 +64,7 @@
                     <tbody>
                         {% for expense in expenses %}
                             <tr>
-                                <td>{{ expense.category }}</td>
+                                <td>{{ expense.get_category_display }}</td>
                                 <td>${{ expense.amount|floatformat:2 }}</td>
                                 <td>{{ expense.date_and_time|date:"Y-m-d" }}</td>
                                 <td>
@@ -93,7 +93,7 @@
                     <tbody>
                         {% for income in incomes %}
                             <tr>
-                                <td>{{ income.category }}</td>
+                                <td>{{ income.get_category_display }}</td>
                                 <td>${{ income.amount|floatformat:2 }}</td>
                                 <td>{{ income.date_and_time|date:"Y-m-d" }}</td>
                                 <td>

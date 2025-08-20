@@ -6,11 +6,11 @@ class Expense(models.Model):
     amount = models.DecimalField(max_digits=10, decimal_places=2)
 
     CATEGORIES = [
-        ('food', 'Food'),
-        ('transport', 'Transport'),
-        ('bills', 'Bills'),
-        ('entertainment', 'Entertainment'),
-        ('other', 'Other'),
+        ('food', 'Food 🍲'),
+        ('transport', 'Transport 🚍'),
+        ('bills', 'Bills 🏦'),
+        ('entertainment', 'Entertainment 🎯'),
+        ('other', 'Other 🗿'),
     ]
 
     category = models.CharField(max_length=50, choices=CATEGORIES)

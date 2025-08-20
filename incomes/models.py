@@ -3,12 +3,11 @@ from datetime import datetime
 
 class Income(models.Model):
     amount = models.DecimalField(max_digits=10, decimal_places=2)
-
     CATEGORIES = [
-        ('salary', 'Salary'),
-        ('investment', 'Investment'),
-        ('gift', 'Gift'),
-        ('other', 'Other'),
+        ('salary', 'Salary 💵'),
+        ('investment', 'Investment 📈'),
+        ('gift', 'Gift 🎁'),
+        ('other', 'Other 💼'),
     ]
 
     category = models.CharField(max_length=50, choices=CATEGORIES)
